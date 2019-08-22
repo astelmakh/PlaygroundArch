@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.playground.feature_purchase_impl" >
+    <application>
+        <activity android:name=".presentation.PurchaseActivity"/>
+    </application>
+</manifest>
