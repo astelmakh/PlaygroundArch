@@ -2,10 +2,10 @@ package com.playground.serviceshop
 
 import android.app.Application
 import com.arellomobile.mvp.RegisterMoxyReflectorPackages
+import com.playground.core_navigation_impl.di.CoreNavigationComponent
 import com.playground.corenetworkimpl.di.CoreNetworkComponent
 import com.playground.featureshowcase.di.DaggerShowCaseFeatureComponent_ShowCaseFeatureDependenciesComponent
 import com.playground.featureshowcase.di.ShowCaseFeatureComponent
-import com.playground.serviceshop.di.AppComponent
 
 @RegisterMoxyReflectorPackages(value = ["com.playground.featureshowcase"])
 class ServiceShopApp : Application() {
@@ -16,7 +16,7 @@ class ServiceShopApp : Application() {
         ShowCaseFeatureComponent.initAndGet(
             DaggerShowCaseFeatureComponent_ShowCaseFeatureDependenciesComponent.builder()
                 .coreNetworkApi(CoreNetworkComponent.get())
-                .coreNavigationApi(AppComponent.get(this))
+                .coreNavigationApi(CoreNavigationComponent.get(this))
                 .build()
         )
     }

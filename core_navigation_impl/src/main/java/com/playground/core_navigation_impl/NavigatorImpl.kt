@@ -1,4 +1,4 @@
-package com.playground.serviceshop
+package com.playground.core_navigation_impl
 
 import android.content.Context
 import android.content.Intent
