@@ -11,6 +11,7 @@ import com.playground.corenavigation.IntentKey
 import com.playground.corenavigation.IntentResolver
 import com.playground.featureshowcase.R
 import com.playground.featureshowcase.di.ShowCaseFeatureComponent
+import com.playground.featureshowcase.di.ShowCaseScreenModule
 import com.playground.featureshowcase.presentation.list.adapter.ShowCaseAdapter
 import com.playground.featureshowcase.presentation.list.model.ShowCaseItemModel
 import kotlinx.android.synthetic.main.a_showcase.*
@@ -24,14 +25,16 @@ class ShowCaseActivity : BaseActivity(), ShowCaseView {
     @Inject
     lateinit var adapter: ShowCaseAdapter
 
+    private val component by lazy { ShowCaseFeatureComponent.get().showCaseScreenComponent(ShowCaseScreenModule(this)) }
+
     @ProvidePresenter
     fun providePresenter(): ShowCasePresenter {
-        return ShowCaseFeatureComponent.get().showCaseScreenComponent().showCaseScreenPresenter()
+        return component.showCaseScreenPresenter()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        ShowCaseFeatureComponent.get().showCaseScreenComponent().inject(this)
+        component.inject(this)
 
         setContentView(R.layout.a_showcase)
         setupUI()

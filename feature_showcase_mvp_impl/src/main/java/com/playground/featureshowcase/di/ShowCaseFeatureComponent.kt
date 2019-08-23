@@ -21,7 +21,7 @@ abstract class ShowCaseFeatureComponent : ShowCaseFeatureApi {
     @PerFeature
     interface ShowCaseFeatureDependenciesComponent : ShowCaseFeatureDependencies
 
-    abstract fun showCaseScreenComponent(): ShowCaseScreenComponent
+    abstract fun showCaseScreenComponent(module: ShowCaseScreenModule): ShowCaseScreenComponent
 
     companion object {
 

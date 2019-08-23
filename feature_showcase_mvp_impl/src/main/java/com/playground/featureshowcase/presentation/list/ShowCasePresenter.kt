@@ -1,5 +1,6 @@
 package com.playground.featureshowcase.presentation.list
 
+import android.content.Context
 import com.arellomobile.mvp.InjectViewState
 import com.playground.core_presentation_mvp.base.BasePresenter
 import com.playground.core_presentation_mvp.common.error.PresentationError
@@ -17,7 +18,8 @@ class ShowCasePresenter
 @Inject constructor(
     private val showCaseInteractor: ShowCaseInteractor,
     private val mapper: ShowCaseItemModel.Mapper,
-    private val navigator: Navigator
+    private val navigator: Navigator,
+    private val context: Context
 ) :
     BasePresenter<ShowCaseView>(CompositeDisposable()) {
 
@@ -41,6 +43,6 @@ class ShowCasePresenter
     }
 
     fun showCaseChosen(item: ShowCaseItemModel) {
-        navigator.createIntent(IntentKey.Purchase("", "", ""))
+        navigator.createIntent(context, IntentKey.Purchase("", "", ""))
     }
 }

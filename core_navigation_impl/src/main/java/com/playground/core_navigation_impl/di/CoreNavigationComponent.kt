@@ -13,11 +13,10 @@ abstract class CoreNavigationComponent : CoreNavigationApi {
         @Volatile
         private var component: CoreNavigationComponent? = null
 
-        fun get(context: Context): CoreNavigationComponent {
+        fun get(): CoreNavigationComponent {
             val componentLocal = component
             return componentLocal ?: synchronized(this) {
                 componentLocal ?: DaggerCoreNavigationComponent.builder()
-                    .coreNavigationModule(CoreNavigationModule(context))
                     .build().apply { component = this }
             }
         }

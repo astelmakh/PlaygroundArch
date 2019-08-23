@@ -16,7 +16,7 @@ class ServiceShopApp : Application() {
         ShowCaseFeatureComponent.initAndGet(
             DaggerShowCaseFeatureComponent_ShowCaseFeatureDependenciesComponent.builder()
                 .coreNetworkApi(CoreNetworkComponent.get())
-                .coreNavigationApi(CoreNavigationComponent.get(this))
+                .coreNavigationApi(CoreNavigationComponent.get())
                 .build()
         )
     }
