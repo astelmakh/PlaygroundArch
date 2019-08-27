@@ -1,1 +1,1 @@
-include ':app', ':core_network_api', ':core_network_impl', ':feature_showcase_mvp_impl', ':core_utils', ':feature_showcase_mvp_api', ':core_navigation_api', ':feature_purchase_api', ':feature_purchase_impl', ':core_presentation_mvp', ':core_navigation_impl'
+include ':app', ':core_network_api', ':core_network_impl', ':feature_showcase_mvp_impl', ':core_utils', ':feature_showcase_mvp_api', ':core_navigation_api', ':feature_purchase_api', ':feature_purchase_impl', ':core_presentation_mvp', ':core_navigation_impl', ':core_presentation'

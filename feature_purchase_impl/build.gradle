@@ -31,7 +31,9 @@ dependencies {
 
     implementation project(':core_utils')
     implementation project(':core_navigation_api')
+    implementation project(':core_presentation')
     implementation project(':core_presentation_mvp')
+    implementation project(':feature_purchase_api')
 
     def commonDependencies = rootProject.ext.commonDependencies
     def presentationDependencies = rootProject.ext.presentationDependencies
@@ -57,6 +59,7 @@ dependencies {
     kapt presentationDependencies.glideCompiler
 
     implementation presentationDependencies.material
+    implementation presentationDependencies.cicerone
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     testImplementation 'junit:junit:4.12'

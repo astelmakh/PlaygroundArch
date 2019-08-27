@@ -1,17 +1,38 @@
 package com.playground.core_navigation_impl.di
 
-import com.playground.core_navigation_impl.NavigatorImpl
-import com.playground.corenavigation.Navigator
-import com.playground.feature_purchase_impl.di.PurchaseScreenNavigationModule
-import com.playground.featureshowcase.di.ShowCaseScreenNavigationModule
-import dagger.Binds
+import com.playground.core_navigation_impl.GlobalNavigatorImpl
+import com.playground.corenavigation.GlobalNavigation
+import com.playground.corenavigation.GlobalNavigator
 import dagger.Module
+import dagger.Provides
+import ru.terrakok.cicerone.Cicerone
+import ru.terrakok.cicerone.NavigatorHolder
+import ru.terrakok.cicerone.Router
 import javax.inject.Singleton
 
-@Module(includes = [ShowCaseScreenNavigationModule::class, PurchaseScreenNavigationModule::class])
-abstract class CoreNavigationModule {
+@Module
+class CoreNavigationModule {
 
-    @Binds
+    private val cicerone: Cicerone<Router> = Cicerone.create()
+
+    @Provides
     @Singleton
-    abstract fun provideNavigator(impl: NavigatorImpl): Navigator
+    @GlobalNavigation
+    fun provideNavigator(impl: GlobalNavigatorImpl): GlobalNavigator {
+        return impl
+    }
+
+    @Singleton
+    @Provides
+    @GlobalNavigation
+    fun provideGlobalRouter(): Router {
+        return cicerone.router
+    }
+
+    @Singleton
+    @Provides
+    @GlobalNavigation
+    fun provideGlobalNavigatorHolder(): NavigatorHolder {
+        return cicerone.navigatorHolder
+    }
 }

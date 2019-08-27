@@ -29,19 +29,24 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(':core_utils')
     implementation project(':core_navigation_api')
+    implementation project(':core_network_api')
+    implementation project(':core_network_impl')
+    implementation project(':core_utils')
     implementation project(':feature_showcase_mvp_api')
     implementation project(':feature_showcase_mvp_impl')
     implementation project(':feature_purchase_api')
     implementation project(':feature_purchase_impl')
 
     def commonDependencies = rootProject.ext.commonDependencies
+    def presentationDependencies = rootProject.ext.presentationDependencies
 
     implementation commonDependencies.kotlinStdLib
 
     implementation commonDependencies.dagger
     kapt commonDependencies.daggerCompiler
+
+    implementation presentationDependencies.cicerone
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     testImplementation 'junit:junit:4.12'

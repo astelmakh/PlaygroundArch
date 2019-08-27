@@ -1,8 +1,18 @@
 package com.playground.corenavigation.di
 
-import com.playground.corenavigation.Navigator
+import com.playground.corenavigation.GlobalNavigation
+import com.playground.corenavigation.GlobalNavigator
+import ru.terrakok.cicerone.NavigatorHolder
+import ru.terrakok.cicerone.Router
 
 interface CoreNavigationApi {
 
-    fun navigator(): Navigator
+    @GlobalNavigation
+    fun globalRouter(): Router
+
+    @GlobalNavigation
+    fun globalNavigator(): GlobalNavigator
+
+    @GlobalNavigation
+    fun globalNavigatorHolder(): NavigatorHolder
 }

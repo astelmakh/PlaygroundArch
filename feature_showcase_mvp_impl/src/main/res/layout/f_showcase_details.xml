@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPurchase"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/ivShowCase"
+        android:layout_alignTop="@id/tvShowCaseTitle"
+        android:layout_alignBottom="@id/tvShowCaseDescription"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/vertical_margin_default"
+        android:adjustViewBounds="true"
+        android:gravity="center"
+        android:text="@string/showcase_details__purchase_btn"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvShowCaseDescription" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivShowCase"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/vertical_margin_default"
+        android:adjustViewBounds="true"
+        android:transitionName="showcase_list_to_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvShowCaseDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvShowCaseTitle"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:textAppearance="?attr/textAppearanceListItemSecondary"
+        app:layout_constraintTop_toBottomOf="@id/tvShowCaseTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvShowCaseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="@dimen/vertical_margin_default"
+        android:layout_marginEnd="4dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        app:layout_constraintTop_toBottomOf="@id/ivShowCase" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,6 +36,7 @@ dependencies {
     implementation project(':core_utils')
     implementation project(':core_network_api')
     implementation project(':core_navigation_api')
+    implementation project(':core_presentation')
     implementation project(':core_presentation_mvp')
     implementation project(':feature_showcase_mvp_api')
 
@@ -63,6 +64,16 @@ dependencies {
     kapt presentationDependencies.glideCompiler
 
     implementation presentationDependencies.material
+
+    implementation androidDependencies.room
+    implementation androidDependencies.roomRx
+    kapt androidDependencies.roomCompiler
+
+    implementation presentationDependencies.swipeRefreshLayout
+
+    implementation presentationDependencies.constraintLayout
+
+    implementation presentationDependencies.cicerone
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     testImplementation 'junit:junit:4.12'

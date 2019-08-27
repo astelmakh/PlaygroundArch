@@ -1,12 +1,16 @@
 package com.playground.core_navigation_impl.di
 
-import android.content.Context
 import com.playground.corenavigation.di.CoreNavigationApi
+import com.playground.coreutils.di.AppApi
+import com.playground.coreutils.di.AppComponent
 import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [CoreNavigationModule::class])
+@Component(
+    dependencies = [AppApi::class],
+    modules = [CoreNavigationModule::class]
+)
 abstract class CoreNavigationComponent : CoreNavigationApi {
 
     companion object {
@@ -17,6 +21,7 @@ abstract class CoreNavigationComponent : CoreNavigationApi {
             val componentLocal = component
             return componentLocal ?: synchronized(this) {
                 componentLocal ?: DaggerCoreNavigationComponent.builder()
+                    .appApi(AppComponent.get())
                     .build().apply { component = this }
             }
         }

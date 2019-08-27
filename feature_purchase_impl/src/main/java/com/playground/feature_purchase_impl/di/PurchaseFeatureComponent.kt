@@ -2,10 +2,12 @@ package com.playground.feature_purchase_impl.di
 
 import com.playground.corenavigation.di.CoreNavigationApi
 import com.playground.coreutils.di.general.PerFeature
+import com.playground.feature_purchase_api.PurchaseFeatureApi
 import dagger.Component
 
-@Component(dependencies = [PurchaseFeatureDependencies::class])
-abstract class PurchaseFeatureComponent {
+@Component(dependencies = [PurchaseFeatureDependencies::class], modules = [PurchaseFeatureModule::class])
+@PerFeature
+abstract class PurchaseFeatureComponent : PurchaseFeatureApi {
 
     @Component(dependencies = [CoreNavigationApi::class])
     @PerFeature
@@ -26,7 +28,7 @@ abstract class PurchaseFeatureComponent {
 
         fun get(): PurchaseFeatureComponent {
             return component?.let { it }
-                ?: throw RuntimeException("You must call 'initAndGet(showCaseFeatureDependencies: ShowCaseFeatureDependencies)' method")
+                ?: throw RuntimeException("You must call 'initAndGet(purchaseFeatureDependencies: PurchaseFeatureDependencies)' method")
         }
     }
 }
