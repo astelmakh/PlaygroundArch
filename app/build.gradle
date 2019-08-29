@@ -47,6 +47,7 @@ dependencies {
     kapt presentationDependencies.moxyCompiler
 
     implementation presentationDependencies.cicerone
+    implementation presentationDependencies.material
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

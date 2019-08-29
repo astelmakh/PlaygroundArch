@@ -44,6 +44,7 @@ ext {
 
     // presentation
     supportLibraryVersion = '1.0.0'
+    materialVersion = '1.1.0-alpha09'
     moxyVersion = '1.5.6'
     moxyAndroidXVersion = '1.0.14'
     moxyAltVersion = '1.7.0'
@@ -80,7 +81,7 @@ ext {
             swipeRefreshLayout: "androidx.swiperefreshlayout:swiperefreshlayout:${swipeRefreshLayoutVersion}",
             constraintLayout  : "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
             recyclerview      : "androidx.recyclerview:recyclerview:${supportLibraryVersion}",
-            material          : "com.google.android.material:material:${supportLibraryVersion}",
+            material          : "com.google.android.material:material:${materialVersion}",
 
             moxy              : "com.arello-mobile:moxy:${moxyVersion}",
             moxyAlt           : "tech.schoolhelper:moxy-x:1.7.0",
