@@ -1,4 +1,4 @@
-package com.playground.core_navigation_impl
+package com.playground.corenavigationimpl
 
 import android.content.Context
 import com.playground.corenavigation.GlobalFeature

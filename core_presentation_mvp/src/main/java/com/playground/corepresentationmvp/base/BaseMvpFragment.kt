@@ -1,7 +1,7 @@
-package com.playground.core_presentation_mvp.base
+package com.playground.corepresentationmvp.base
 
 import com.arellomobile.mvp.MvpAppCompatFragment
-import com.playground.core_presentation.error.PresentationError
+import com.playground.corepresentation.error.PresentationError
 import io.reactivex.disposables.Disposable
 
 abstract class BaseMvpFragment : MvpAppCompatFragment(), BaseMvpView {

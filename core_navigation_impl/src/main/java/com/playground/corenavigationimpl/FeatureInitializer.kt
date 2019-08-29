@@ -1,10 +1,10 @@
-package com.playground.core_navigation_impl
+package com.playground.corenavigationimpl
 
-import com.playground.core_navigation_impl.di.CoreNavigationComponent
+import com.playground.corenavigationimpl.di.CoreNavigationComponent
 import com.playground.corenetworkimpl.di.CoreNetworkComponent
 import com.playground.coreutils.di.AppComponent
-import com.playground.feature_purchase_impl.di.DaggerPurchaseFeatureComponent_PurchaseFeatureDependenciesComponent
-import com.playground.feature_purchase_impl.di.PurchaseFeatureComponent
+import com.playground.featurepurchaseimpl.di.DaggerPurchaseFeatureComponent_PurchaseFeatureDependenciesComponent
+import com.playground.featurepurchaseimpl.di.PurchaseFeatureComponent
 import com.playground.featureshowcase.di.DaggerShowCaseFeatureComponent_ShowCaseFeatureDependenciesComponent
 import com.playground.featureshowcase.di.ShowCaseFeatureComponent
 

@@ -1,4 +1,4 @@
-package com.playground.core_presentation.error
+package com.playground.corepresentation.error
 
 sealed class PresentationError(val content: Content? = null) : Throwable() {
 
@@ -10,9 +10,10 @@ sealed class PresentationError(val content: Content? = null) : Throwable() {
         )
     }
 
-    sealed class Internal : PresentationError() {
-    }
+    sealed class Internal : PresentationError()
 
-    data class Content(val title: String? = null,
-                       val subtitle: String? = null)
+    data class Content(
+        val title: String? = null,
+        val subtitle: String? = null
+    )
 }

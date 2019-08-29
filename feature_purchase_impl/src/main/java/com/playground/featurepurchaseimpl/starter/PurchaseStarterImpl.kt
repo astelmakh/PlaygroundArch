@@ -1,9 +1,9 @@
-package com.playground.feature_purchase_impl.starter
+package com.playground.featurepurchaseimpl.starter
 
 import android.content.Context
 import com.playground.coreutils.di.general.PerFeature
-import com.playground.feature_purchase_api.starter.PurchaseStarter
-import com.playground.feature_purchase_impl.presentation.PurchaseActivity
+import com.playground.featurepurchaseapi.starter.PurchaseStarter
+import com.playground.featurepurchaseimpl.presentation.PurchaseActivity
 import javax.inject.Inject
 
 @PerFeature

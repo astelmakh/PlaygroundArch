@@ -1,6 +1,6 @@
-package com.playground.core_navigation_impl.di
+package com.playground.corenavigationimpl.di
 
-import com.playground.core_navigation_impl.GlobalNavigatorImpl
+import com.playground.corenavigationimpl.GlobalNavigatorImpl
 import com.playground.corenavigation.GlobalNavigation
 import com.playground.corenavigation.GlobalNavigator
 import dagger.Module

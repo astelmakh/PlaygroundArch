@@ -1,10 +1,10 @@
-package com.playground.feature_purchase_impl.presentation
+package com.playground.featurepurchaseimpl.presentation
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.playground.core_presentation_mvp.base.BaseMvpActivity
-import com.playground.feature_purchase_impl.R
+import com.playground.corepresentationmvp.base.BaseMvpActivity
+import com.playground.featurepurchaseimpl.R
 
 class PurchaseActivity : BaseMvpActivity() {
 

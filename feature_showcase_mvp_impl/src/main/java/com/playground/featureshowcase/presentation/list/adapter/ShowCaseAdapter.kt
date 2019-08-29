@@ -10,7 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.playground.core_presentation.ui.BaseRecyclerViewAdapter
+import com.playground.corepresentation.ui.BaseRecyclerViewAdapter
 import com.playground.featureshowcase.R
 import com.playground.featureshowcase.presentation.model.ShowCaseItemModel
 import javax.inject.Inject
@@ -41,6 +41,5 @@ class ShowCaseAdapter
         val title: AppCompatTextView = itemView.findViewById(R.id.tvShowCaseTitle)
         val description: AppCompatTextView = itemView.findViewById(R.id.tvShowCaseDescription)
         val btnPurchase: AppCompatImageButton = itemView.findViewById(R.id.btnPurchase)
-
     }
 }

@@ -1,9 +1,9 @@
 package com.playground.featureshowcase.presentation.list
 
 import com.arellomobile.mvp.InjectViewState
-import com.playground.core_presentation.error.PresentationError
-import com.playground.core_presentation.error.PresentationErrorFactory
-import com.playground.core_presentation_mvp.base.BaseMvpPresenter
+import com.playground.corepresentation.error.PresentationError
+import com.playground.corepresentation.error.PresentationErrorFactory
+import com.playground.corepresentationmvp.base.BaseMvpPresenter
 import com.playground.featureshowcase.di.ShowCaseNavigation
 import com.playground.featureshowcase.domain.ShowCaseInteractor
 import com.playground.featureshowcase.presentation.model.ShowCaseItemModel

@@ -1,4 +1,4 @@
-package com.playground.feature_purchase_api.starter
+package com.playground.featurepurchaseapi.starter
 
 import android.content.Context
 

@@ -1,4 +1,4 @@
-package com.playground.core_presentation.error
+package com.playground.corepresentation.error
 
 /**
  *  Helper for representing exceptions which comes to presentation layer into a user-friendly text

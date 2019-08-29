@@ -35,7 +35,6 @@ class ShowCaseCreatorDataStore
             .toList()
     }
 
-
     override fun saveInfo(info: List<ShowCaseEntity>): Completable {
         throw UnsupportedOperationException()
     }

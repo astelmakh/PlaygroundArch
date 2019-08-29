@@ -1,8 +1,8 @@
-package com.playground.feature_purchase_impl.di
+package com.playground.featurepurchaseimpl.di
 
 import com.playground.coreutils.di.general.PerFeature
-import com.playground.feature_purchase_api.starter.PurchaseStarter
-import com.playground.feature_purchase_impl.starter.PurchaseStarterImpl
+import com.playground.featurepurchaseapi.starter.PurchaseStarter
+import com.playground.featurepurchaseimpl.starter.PurchaseStarterImpl
 import dagger.Binds
 import dagger.Module
 

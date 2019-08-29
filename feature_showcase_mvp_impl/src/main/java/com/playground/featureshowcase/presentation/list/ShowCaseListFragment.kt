@@ -8,7 +8,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
-import com.playground.core_presentation_mvp.base.BaseMvpFragment
+import com.playground.corepresentationmvp.base.BaseMvpFragment
 import com.playground.featureshowcase.R
 import com.playground.featureshowcase.di.ShowCaseFeatureComponent
 import com.playground.featureshowcase.presentation.SharedElementViewListener

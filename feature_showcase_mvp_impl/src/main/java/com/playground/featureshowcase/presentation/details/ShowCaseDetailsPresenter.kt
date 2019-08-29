@@ -1,7 +1,7 @@
 package com.playground.featureshowcase.presentation.details
 
 import com.arellomobile.mvp.InjectViewState
-import com.playground.core_presentation_mvp.base.BaseMvpPresenter
+import com.playground.corepresentationmvp.base.BaseMvpPresenter
 import com.playground.corenavigation.GlobalFeature
 import com.playground.corenavigation.GlobalNavigation
 import com.playground.featureshowcase.domain.ShowCaseInteractor

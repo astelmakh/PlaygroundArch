@@ -1,0 +1,3 @@
+package com.playground.featurepurchaseimpl.di
+
+interface PurchaseFeatureDependencies

@@ -1,8 +1,8 @@
-package com.playground.core_presentation_mvp.base
+package com.playground.corepresentationmvp.base
 
 import com.arellomobile.mvp.MvpPresenter
-import com.playground.core_presentation.error.PresentationError
-import com.playground.core_presentation.error.PresentationErrorFactory
+import com.playground.corepresentation.error.PresentationError
+import com.playground.corepresentation.error.PresentationErrorFactory
 import io.reactivex.disposables.CompositeDisposable
 
 abstract class BaseMvpPresenter<View : BaseMvpView>(protected val compositeDisposable: CompositeDisposable) :

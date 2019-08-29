@@ -2,8 +2,8 @@ package com.playground.serviceshop
 
 import android.app.Application
 import com.arellomobile.mvp.RegisterMoxyReflectorPackages
-import com.playground.core_navigation_impl.FeatureInitializer
-import com.playground.core_navigation_impl.di.CoreNavigationComponent
+import com.playground.corenavigationimpl.FeatureInitializer
+import com.playground.corenavigationimpl.di.CoreNavigationComponent
 import com.playground.coreutils.di.AppComponent
 import com.playground.featureshowcase.di.ShowCaseFeatureInitializer
 

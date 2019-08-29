@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.transition.Fade
-import com.playground.core_presentation_mvp.base.BaseMvpActivity
+import com.playground.corepresentationmvp.base.BaseMvpActivity
 import com.playground.featureshowcase.R
 import com.playground.featureshowcase.di.ShowCaseFeatureComponent
 import com.playground.featureshowcase.di.ShowCaseFeatureInitializer

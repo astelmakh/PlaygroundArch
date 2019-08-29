@@ -13,5 +13,4 @@ class ShowCaseListScreenModule(private val context: Context) {
     fun provideContext(): Context {
         return context
     }
-
 }

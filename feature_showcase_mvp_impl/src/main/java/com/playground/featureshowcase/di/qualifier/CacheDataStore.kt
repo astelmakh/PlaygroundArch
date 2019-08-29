@@ -5,5 +5,4 @@ import javax.inject.Qualifier
 @Qualifier
 @MustBeDocumented
 @Retention(AnnotationRetention.RUNTIME)
-annotation class CacheDataStore {
-}
+annotation class CacheDataStore

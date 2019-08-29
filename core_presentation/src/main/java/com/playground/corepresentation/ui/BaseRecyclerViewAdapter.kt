@@ -1,17 +1,23 @@
-package com.playground.core_presentation.ui
+package com.playground.corepresentation.ui
 
 import androidx.recyclerview.widget.RecyclerView
 
-abstract class BaseRecyclerViewAdapter<T, VH : RecyclerView.ViewHolder, SharedElement>(var data: MutableList<T> = ArrayList(),
-                                          open var onItemClickListener: ((T, SharedElement?) -> Unit?)? = null)
-    : RecyclerView.Adapter<VH>() {
+abstract class BaseRecyclerViewAdapter<T, VH : RecyclerView.ViewHolder, SharedElement>(
+    var data: MutableList<T> = ArrayList(),
+    open var onItemClickListener: ((T, SharedElement?) -> Unit?)? = null
+) : RecyclerView.Adapter<VH>() {
 
     override fun onBindViewHolder(holder: VH, position: Int) {
 
         val adapterPosition = holder.adapterPosition
         if (adapterPosition != RecyclerView.NO_POSITION) {
             val item = data[adapterPosition]
-            holder.itemView.setOnClickListener { onItemClickListener?.invoke(item, getSharedElement(holder)) }
+            holder.itemView.setOnClickListener {
+                onItemClickListener?.invoke(
+                    item,
+                    getSharedElement(holder)
+                )
+            }
             onBindViewHolder(holder, item, adapterPosition)
         }
     }

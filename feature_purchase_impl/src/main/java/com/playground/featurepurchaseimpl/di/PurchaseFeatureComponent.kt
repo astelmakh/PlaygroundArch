@@ -1,8 +1,8 @@
-package com.playground.feature_purchase_impl.di
+package com.playground.featurepurchaseimpl.di
 
 import com.playground.corenavigation.di.CoreNavigationApi
 import com.playground.coreutils.di.general.PerFeature
-import com.playground.feature_purchase_api.PurchaseFeatureApi
+import com.playground.featurepurchaseapi.PurchaseFeatureApi
 import dagger.Component
 
 @Component(dependencies = [PurchaseFeatureDependencies::class], modules = [PurchaseFeatureModule::class])
